@@ -50,6 +50,20 @@ body {
   border: 8px solid #2f3b52;
 }
 
+.button {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background: #1d4ed8;
+}
+
 .sidebar h1 {
   font-size: 30px;
   margin: 10px 0;
