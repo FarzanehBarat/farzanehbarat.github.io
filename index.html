@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -338,6 +339,27 @@
       gap: 24px;
     }
 
+    .presentation-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .presentation-links a {
+      display: inline-block;
+      border: 1px solid var(--secondary);
+      padding: 8px 13px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .presentation-links a:hover {
+      text-decoration: none;
+      background: var(--accent);
+    }
+
     .site-footer {
       background: #ffffff;
       border-top: 1px solid var(--border);
@@ -415,57 +437,182 @@
     ]
   }
   </script>
+
 </head>
 
+
 <body>
+
+  <!-- =========================================================
+       NAVIGATION
+       ========================================================= -->
   <header class="site-header">
     <nav class="navbar">
+
       <div class="logo">Farzaneh Barat</div>
 
       <ul class="nav-links">
-        <li><button type="button" class="nav-button active" data-page="home">Home</button></li>
-        <li><button type="button" class="nav-button" data-page="education">Education</button></li>
-        <li><button type="button" class="nav-button" data-page="experience">Experience</button></li>
-        <li><button type="button" class="nav-button" data-page="research">Research</button></li>
-        <li><button type="button" class="nav-button" data-page="publications">Publications</button></li>
-        <li><button type="button" class="nav-button" data-page="publications">Publications</button></li>
-        <li><button type="button" class="nav-button" data-page="presentations">Presentations</button></li>
-        <li><button type="button" class="nav-button" data-page="awards">Awards & Skills</button></li>
+
+        <li>
+          <button
+            type="button"
+            class="nav-button active"
+            data-page="home">
+            Home
+          </button>
+        </li>
+
+        <li>
+          <button
+            type="button"
+            class="nav-button"
+            data-page="education">
+            Education
+          </button>
+        </li>
+
+        <li>
+          <button
+            type="button"
+            class="nav-button"
+            data-page="experience">
+            Experience
+          </button>
+        </li>
+
+        <li>
+          <button
+            type="button"
+            class="nav-button"
+            data-page="research">
+            Research
+          </button>
+        </li>
+
+        <li>
+          <button
+            type="button"
+            class="nav-button"
+            data-page="publications">
+            Publications
+          </button>
+        </li>
+
+        <li>
+          <button
+            type="button"
+            class="nav-button"
+            data-page="presentations">
+            Presentations
+          </button>
+        </li>
+
+        <li>
+          <button
+            type="button"
+            class="nav-button"
+            data-page="awards">
+            Awards &amp; Skills
+          </button>
+        </li>
+
+        <li>
+          <button
+            type="button"
+            class="nav-button"
+            data-page="contact">
+            Contact
+          </button>
+        </li>
+
       </ul>
+
     </nav>
   </header>
 
+
+  <!-- =========================================================
+       MAIN CONTENT
+       ========================================================= -->
   <main>
-    <section id="home" class="page-section home-section active">
+
+
+    <!-- =========================================================
+         HOME
+         ========================================================= -->
+    <section
+      id="home"
+      class="page-section home-section active">
+
       <div class="hero">
+
         <div class="hero-main">
-          <span class="eyebrow">Battery Modeling | Estimation | Second-Life Systems</span>
+
+          <span class="eyebrow">
+            Battery Modeling | Estimation | Second-Life Systems
+          </span>
 
           <h1>Farzaneh Barat</h1>
 
-          <h2>Ph.D. Student in Mechanical Engineering</h2>
+          <h2>
+            Ph.D. Student in Mechanical Engineering
+          </h2>
 
           <p class="location">
             University of Kansas, Lawrence, KS, USA
           </p>
 
           <p class="hero-summary">
-            I am a Ph.D. student in Mechanical Engineering at the University of Kansas, working on lithium-ion battery modeling, parameter identification, electro-thermal analysis, health diagnostics, and second-life battery systems.
-            My research focuses on developing uncertainty-aware identification frameworks for nonlinear state-space models, with applications to equivalent circuit models and state-of-health-aware battery diagnostics.
-            I am also interested in second-life lithium-ion battery systems, where experimental testing, diagnostic characterization, and physics-informed modeling are used to evaluate battery degradation, safety, and reuse potential.
-            My technical background includes MATLAB/Simulink, Python, battery testing, electro-thermal modeling, numerical methods, and engineering simulation tools.
+            I am a Ph.D. student in Mechanical Engineering at the
+            University of Kansas, working on lithium-ion battery modeling,
+            parameter identification, electro-thermal analysis, health
+            diagnostics, and second-life battery systems.
+
+            My research focuses on developing uncertainty-aware
+            identification frameworks for nonlinear state-space models,
+            with applications to equivalent circuit models and
+            state-of-health-aware battery diagnostics.
+
+            I am also interested in second-life lithium-ion battery systems,
+            where experimental testing, diagnostic characterization, and
+            physics-informed modeling are used to evaluate battery
+            degradation, safety, and reuse potential.
+
+            My technical background includes MATLAB/Simulink, Python,
+            battery testing, electro-thermal modeling, numerical methods,
+            and engineering simulation tools.
           </p>
 
           <div class="keyword-row">
-            <span class="keyword">Lithium-Ion Batteries</span>
-            <span class="keyword">System Identification</span>
-            <span class="keyword">Ensemble Kalman Inversion</span>
-            <span class="keyword">State-Space Models</span>
-            <span class="keyword">Battery Health Diagnostics</span>
+
+            <span class="keyword">
+              Lithium-Ion Batteries
+            </span>
+
+            <span class="keyword">
+              System Identification
+            </span>
+
+            <span class="keyword">
+              Ensemble Kalman Inversion
+            </span>
+
+            <span class="keyword">
+              State-Space Models
+            </span>
+
+            <span class="keyword">
+              Battery Health Diagnostics
+            </span>
+
           </div>
+
         </div>
 
+
+        <!-- PROFILE CARD -->
         <aside class="profile-card">
+
           <img
             class="profile-photo"
             src="assets/profile.jpg"
@@ -474,437 +621,860 @@
 
           <h3>Farzaneh Barat</h3>
 
-          <p>Mechanical Engineering Ph.D. Student</p>
+          <p>
+            Mechanical Engineering Ph.D. Student
+          </p>
 
           <div class="profile-links">
-            <a href="https://scholar.google.com/citations?hl=en&user=KrAn6_gAAAAJ"
-               target="_blank"
-               rel="noopener noreferrer">
+
+            <a
+              href="https://scholar.google.com/citations?hl=en&user=KrAn6_gAAAAJ"
+              target="_blank"
+              rel="noopener noreferrer">
               Google Scholar
             </a>
 
-            <a href="https://www.linkedin.com/in/farzaneh-barat-59b69525b/"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/farzaneh-barat-59b69525b/"
+              target="_blank"
+              rel="noopener noreferrer">
               LinkedIn
             </a>
 
-            <a href="https://github.com/farzanehbarat"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+              href="https://github.com/farzanehbarat"
+              target="_blank"
+              rel="noopener noreferrer">
               GitHub
             </a>
 
-            <a href="assets/CV.pdf" target="_blank" rel="noopener noreferrer">
+            <a
+              href="assets/CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
               Download CV
             </a>
+
           </div>
+
         </aside>
+
       </div>
+
     </section>
 
-    <section id="education" class="page-section">
+
+    <!-- =========================================================
+         EDUCATION
+         ========================================================= -->
+    <section
+      id="education"
+      class="page-section">
+
       <div class="section-card">
+
         <h2>Education</h2>
 
         <div class="item">
-          <p class="item-title">University of Kansas</p>
-          <p class="item-meta">Ph.D. in Mechanical Engineering | Lawrence, KS | Aug. 2023 – Present</p>
-          <p><strong>Advisor:</strong> Huazhen Fang</p>
+
+          <p class="item-title">
+            University of Kansas
+          </p>
+
+          <p class="item-meta">
+            Ph.D. in Mechanical Engineering |
+            Lawrence, KS |
+            Aug. 2023 – Present
+          </p>
+
           <p>
-            <strong>Research Focus:</strong> Lithium-ion battery modeling,
-            parameter identification, electro-thermal analysis, health diagnostics,
+            <strong>Advisor:</strong>
+            Huazhen Fang
+          </p>
+
+          <p>
+            <strong>Research Focus:</strong>
+            Lithium-ion battery modeling,
+            parameter identification,
+            electro-thermal analysis,
+            health diagnostics,
             and second-life battery systems.
           </p>
+
         </div>
 
-        <div class="item">
-          <p class="item-title">University of Kashan</p>
-          <p class="item-meta">M.Sc. in Mechanical Engineering | Kashan, Iran | Sep. 2015 – Feb. 2018</p>
-          <p>
-            <strong>Dissertation:</strong> Solving path optimal tracking problem
-            and determining load carrying capacity of manipulator using
-            closed-loop combined optimization method.
-          </p>
-        </div>
 
         <div class="item">
-          <p class="item-title">University of Kashan</p>
-          <p class="item-meta">B.Sc. in Mechanical Engineering | Kashan, Iran | Sep. 2011 – Sep. 2015</p>
-          <p>
-            <strong>Final Project:</strong> Hybrid solar-geothermal systems for
-            heating and cooling of buildings.
+
+          <p class="item-title">
+            University of Kashan
           </p>
+
+          <p class="item-meta">
+            M.Sc. in Mechanical Engineering |
+            Kashan, Iran |
+            Sep. 2015 – Feb. 2018
+          </p>
+
+          <p>
+            <strong>Dissertation:</strong>
+            Solving path optimal tracking problem and determining
+            load carrying capacity of manipulator using closed-loop
+            combined optimization method.
+          </p>
+
         </div>
+
+
+        <div class="item">
+
+          <p class="item-title">
+            University of Kashan
+          </p>
+
+          <p class="item-meta">
+            B.Sc. in Mechanical Engineering |
+            Kashan, Iran |
+            Sep. 2011 – Sep. 2015
+          </p>
+
+          <p>
+            <strong>Final Project:</strong>
+            Hybrid solar-geothermal systems for heating and cooling
+            of buildings.
+          </p>
+
+        </div>
+
       </div>
+
     </section>
 
-    <section id="presentations" class="page-section">
-  <div class="section-card">
 
-    <h2>Presentations</h2>
+    <!-- =========================================================
+         EXPERIENCE
+         ========================================================= -->
+    <section
+      id="experience"
+      class="page-section">
 
-    <div class="item">
-
-      <p class="item-title">
-        YOUR PAPER TITLE HERE
-      </p>
-
-      <p class="item-meta">
-        Research Paper Presentation | University of Kansas | 2026
-      </p>
-
-      <p>
-        Technical presentation and discussion of a research paper on
-        deep state-space models, variational inference, constrained
-        optimization, and dynamical system learning.
-      </p>
-
-      <p>
-        <strong>Original paper:</strong>
-        Authors' names, Conference/Journal, Year.
-      </p>
-
-      <p>
-        <a href="assets/Deep_State_Space_Models_Presentation.pdf"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Slides (PDF)
-        </a>
-      </p>
-
-    </div>
-
-  </div>
-</section>
-
-    <section id="experience" class="page-section">
       <div class="section-card">
+
         <h2>Work Experience</h2>
 
-        <div class="item">
-          <p class="item-title">Graduate Research Assistant</p>
-          <p class="item-meta">University of Kansas | Lawrence, KS | Aug. 2023 – Present</p>
-          <p>
-            Research on lithium-ion battery modeling, parameter identification,
-            electro-thermal analysis, and second-life battery systems.
-          </p>
-        </div>
 
         <div class="item">
-          <p class="item-title">Graduate Teaching Assistant</p>
-          <p class="item-meta">University of Kansas | Lawrence, KS | Spring 2025</p>
-          <p>
-            Supported laboratory sessions for LCA for Sustainable Design and
-            Numerical Analysis, helping students with MATLAB, numerical methods,
-            and engineering computation.
+
+          <p class="item-title">
+            Graduate Research Assistant
           </p>
+
+          <p class="item-meta">
+            University of Kansas |
+            Lawrence, KS |
+            Aug. 2023 – Present
+          </p>
+
+          <p>
+            Research on lithium-ion battery modeling,
+            parameter identification,
+            electro-thermal analysis,
+            and second-life battery systems.
+          </p>
+
         </div>
 
-        <div class="item">
-          <p class="item-title">Head of R&amp;D / Mechanical Designer</p>
-          <p class="item-meta">Diana Tajhiz Spadana Company and SEMAG Company | Isfahan, Iran | Apr. 2018 – Jun. 2023</p>
-          <p>
-            Led R&amp;D and mechanical design projects for industrial product development.
-          </p>
-        </div>
 
         <div class="item">
-          <p class="item-title">Graduate Teaching Assistant &amp; Instructor</p>
-          <p class="item-meta">University of Kashan | Kashan, Iran | 2015 – 2018</p>
+
+          <p class="item-title">
+            Graduate Teaching Assistant
+          </p>
+
+          <p class="item-meta">
+            University of Kansas |
+            Lawrence, KS |
+            Spring 2025
+          </p>
+
+          <p>
+            Supported laboratory sessions for LCA for Sustainable Design
+            and Numerical Analysis, helping students with MATLAB,
+            numerical methods, and engineering computation.
+          </p>
+
         </div>
+
+
+        <div class="item">
+
+          <p class="item-title">
+            Head of R&amp;D / Mechanical Designer
+          </p>
+
+          <p class="item-meta">
+            Diana Tajhiz Spadana Company and SEMAG Company |
+            Isfahan, Iran |
+            Apr. 2018 – Jun. 2023
+          </p>
+
+          <p>
+            Led R&amp;D and mechanical design projects for
+            industrial product development.
+          </p>
+
+        </div>
+
+
+        <div class="item">
+
+          <p class="item-title">
+            Graduate Teaching Assistant &amp; Instructor
+          </p>
+
+          <p class="item-meta">
+            University of Kashan |
+            Kashan, Iran |
+            2015 – 2018
+          </p>
+
+        </div>
+
       </div>
+
     </section>
 
-    <section id="research" class="page-section">
+
+    <!-- =========================================================
+         RESEARCH
+         ========================================================= -->
+    <section
+      id="research"
+      class="page-section">
+
       <div class="section-card">
+
         <h2>Research Projects</h2>
 
+
         <div class="item">
-          <p class="item-title">Second-Life Lithium-Ion Battery Systems Modeling</p>
+
+          <p class="item-title">
+            Second-Life Lithium-Ion Battery Systems Modeling
+          </p>
+
           <p>
             Investigating second-life lithium-ion battery modules through
-            experimental testing, diagnostic characterization, performance analysis,
-            and physics-informed modeling to evaluate degradation, safety, and
-            reuse potential under practical operating and mechanical conditions.
+            experimental testing, diagnostic characterization,
+            performance analysis, and physics-informed modeling to evaluate
+            degradation, safety, and reuse potential under practical
+            operating and mechanical conditions.
           </p>
+
         </div>
 
-        <div class="item">
-          <p class="item-title">Recursive Parameter Identification of Nonlinear Stochastic State-Space Models</p>
-          <p>
-            Developing a sequentialized Ensemble Kalman Inversion framework for
-            online parameter identification in nonlinear stochastic state-space
-            models with latent states. The method combines particle-based state
-            inference with Kalman-type parameter updates and is applied to
-            lithium-ion battery model identification.
-          </p>
-        </div>
 
         <div class="item">
-          <p class="item-title">Parameter Identification of Battery Models</p>
-          <p>
-            Developing uncertainty-aware parameter identification frameworks for
-            equivalent-circuit and nonlinear battery state-space models using
-            Ensemble Kalman Inversion, with emphasis on accurate model calibration
-            from voltage and temperature measurements.
+
+          <p class="item-title">
+            Recursive Parameter Identification of Nonlinear
+            Stochastic State-Space Models
           </p>
+
+          <p>
+            Developing a sequentialized Ensemble Kalman Inversion framework
+            for online parameter identification in nonlinear stochastic
+            state-space models with latent states. The method combines
+            particle-based state inference with Kalman-type parameter
+            updates and is applied to lithium-ion battery model
+            identification.
+          </p>
+
         </div>
 
-        <div class="item">
-          <p class="item-title">Battery Health Diagnostics and SOH-Aware Modeling</p>
-          <p>
-            Extracting degradation features and developing state-of-health-aware
-            models for lithium-ion batteries, with emphasis on reliable health
-            estimation under demanding applications such as electric vertical
-            takeoff and landing systems.
-          </p>
-        </div>
 
         <div class="item">
-          <p class="item-title">Probabilistic Solver for PMP-Based Optimal Control</p>
-          <p>
-            Developing an uncertainty-aware probabilistic solver for continuous-time
-            optimal control problems governed by Pontryagin's Minimum Principle,
-            formulated as boundary-value problems and solved using probabilistic
-            estimation and smoothing methods.
+
+          <p class="item-title">
+            Parameter Identification of Battery Models
           </p>
+
+          <p>
+            Developing uncertainty-aware parameter identification
+            frameworks for equivalent-circuit and nonlinear battery
+            state-space models using Ensemble Kalman Inversion, with
+            emphasis on accurate model calibration from voltage and
+            temperature measurements.
+          </p>
+
         </div>
+
+
+        <div class="item">
+
+          <p class="item-title">
+            Battery Health Diagnostics and SOH-Aware Modeling
+          </p>
+
+          <p>
+            Extracting degradation features and developing
+            state-of-health-aware models for lithium-ion batteries,
+            with emphasis on reliable health estimation under demanding
+            applications such as electric vertical takeoff and landing
+            systems.
+          </p>
+
+        </div>
+
+
+        <div class="item">
+
+          <p class="item-title">
+            Probabilistic Solver for PMP-Based Optimal Control
+          </p>
+
+          <p>
+            Developing an uncertainty-aware probabilistic solver for
+            continuous-time optimal control problems governed by
+            Pontryagin's Minimum Principle, formulated as boundary-value
+            problems and solved using probabilistic estimation and
+            smoothing methods.
+          </p>
+
+        </div>
+
       </div>
+
     </section>
 
-    <section id="publications" class="page-section">
+
+    <!-- =========================================================
+         PUBLICATIONS
+         ========================================================= -->
+    <section
+      id="publications"
+      class="page-section">
+
       <div class="section-card">
+
         <h2>Publications</h2>
 
+
+        <!-- CONFERENCE PAPERS -->
         <h3>Conference Papers</h3>
 
+
         <div class="item">
+
           <p class="item-title">
-            System Identification of Lithium-Ion Battery Equivalent Circuit Models
-            Using Ensemble Kalman Inversion
+            System Identification of Lithium-Ion Battery Equivalent
+            Circuit Models Using Ensemble Kalman Inversion
           </p>
+
           <p class="item-meta">
             F. Barat, S. Wilson, H. Kim, and H. Fang
           </p>
+
           <p>
-            Accepted for publication in the Proceedings of the 2026 American
-            Control Conference, 2026.
+            Accepted for publication in the Proceedings of the
+            2026 American Control Conference, 2026.
           </p>
+
           <p>
-            <a href="https://arxiv.org/abs/2604.10813"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+              href="https://arxiv.org/abs/2604.10813"
+              target="_blank"
+              rel="noopener noreferrer">
               arXiv
             </a>
           </p>
+
         </div>
 
+
         <div class="item">
+
           <p class="item-title">
-            Solving nonlinear optimization problem using a new closed loop method
-            for optimal tracking of a path
+            Solving nonlinear optimization problem using a new closed
+            loop method for optimal tracking of a path
           </p>
+
           <p class="item-meta">
             F. Barat and M. Irani Rahaghi
           </p>
+
           <p>
-            2019 27th Iranian Conference on Electrical Engineering, Yazd, Iran,
-            pp. 1415–1420, May 2019.
+            2019 27th Iranian Conference on Electrical Engineering,
+            Yazd, Iran, pp. 1415–1420, May 2019.
           </p>
+
           <p>
             DOI:
-            <a href="https://doi.org/10.1109/KBEI.2019.8734913"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+              href="https://doi.org/10.1109/KBEI.2019.8734913"
+              target="_blank"
+              rel="noopener noreferrer">
               10.1109/KBEI.2019.8734913
             </a>
           </p>
+
         </div>
 
+
+        <!-- JOURNAL ARTICLES -->
         <h3>Journal Articles</h3>
 
+
         <div class="item">
+
           <p class="item-title">
-            System identification of nonlinear state-space models using Ensemble
-            Kalman Inversion with application to lithium-ion batteries
+            System identification of nonlinear state-space models using
+            Ensemble Kalman Inversion with application to lithium-ion
+            batteries
           </p>
+
           <p class="item-meta">
             F. Barat and H. Fang
           </p>
+
           <p>
             Under review at IEEE Transactions on Control Systems Technology.
           </p>
+
         </div>
 
+
         <div class="item">
+
           <p class="item-title">
-            Solving nonlinear optimal path tracking problem using a new closed-loop
-            direct-indirect optimization method: Application on mechanical manipulators
+            Solving nonlinear optimal path tracking problem using a new
+            closed-loop direct-indirect optimization method:
+            Application on mechanical manipulators
           </p>
+
           <p class="item-meta">
             M. Irani Rahaghi and F. Barat
           </p>
+
           <p>
-            Robotica, vol. 37, no. 1, pp. 39–61, Jan. 2019.
+            Robotica, vol. 37, no. 1,
+            pp. 39–61, Jan. 2019.
           </p>
+
           <p>
             DOI:
-            <a href="https://doi.org/10.1017/S0263574718000851"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+              href="https://doi.org/10.1017/S0263574718000851"
+              target="_blank"
+              rel="noopener noreferrer">
               10.1017/S0263574718000851
             </a>
           </p>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="awards" class="page-section">
+
+    <!-- =========================================================
+         PRESENTATIONS
+         ========================================================= -->
+    <section
+      id="presentations"
+      class="page-section">
+
       <div class="section-card">
+
+        <h2>Presentations</h2>
+
+
+        <div class="item">
+
+          <p class="item-title">
+            Latent Matters: Learning Deep State-Space Models
+          </p>
+
+          <p class="item-meta">
+            Paper Presentation |
+            University of Kansas |
+            2026
+          </p>
+
+          <p>
+            A technical presentation on learning dynamics in deep
+            state-space models (DSSMs). The presentation discusses
+            limitations of standard evidence lower bound (ELBO) training,
+            the constrained-optimization framework proposed for improving
+            dynamics learning, hierarchical priors for latent-state
+            initialization, and the Extended Kalman VAE (EKVAE).
+            It also covers the connection between variational inference,
+            locally linear latent dynamics, Kalman filtering and smoothing,
+            and system identification.
+          </p>
+
+          <p style="margin-top: 12px;">
+
+            <strong>Original paper:</strong>
+
+            Alexej Klushyn,
+            Richard Kurle,
+            Maximilian Soelch,
+            Botond Cseke,
+            and Patrick van der Smagt,
+
+            <em>
+              Latent Matters: Learning Deep State-Space Models
+            </em>,
+
+            Advances in Neural Information Processing Systems
+            (NeurIPS), 2021.
+
+          </p>
+
+
+          <div class="presentation-links">
+
+            <a
+              href="https://proceedings.neurips.cc/paper/2021/hash/54b2b21af94108d83c2a909d5b0a6a50-Abstract.html"
+              target="_blank"
+              rel="noopener noreferrer">
+              Original Paper
+            </a>
+
+
+            <a
+              href="assets/Deep_State_Space_Models_Presentation.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Slides (PDF)
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         AWARDS AND SKILLS
+         ========================================================= -->
+    <section
+      id="awards"
+      class="page-section">
+
+      <div class="section-card">
+
         <h2>Honors &amp; Awards</h2>
 
         <ul class="list">
-          <li>3rd Place – KU Graduate Student Research Showcase, 2025</li>
-          <li>Ranked 4th in M.Sc. Mechanical Engineering cohort, University of Kashan</li>
-          <li>Ranked 1st in B.Sc. Heat and Fluid Mechanics, University of Kashan</li>
+
+          <li>
+            3rd Place – KU Graduate Student Research Showcase, 2025
+          </li>
+
+          <li>
+            Ranked 4th in M.Sc. Mechanical Engineering cohort,
+            University of Kashan
+          </li>
+
+          <li>
+            Ranked 1st in B.Sc. Heat and Fluid Mechanics,
+            University of Kashan
+          </li>
+
         </ul>
 
-        <h2 style="margin-top: 34px;">Skills</h2>
+
+        <h2 style="margin-top: 34px;">
+          Skills
+        </h2>
+
 
         <div class="two-column">
-          <div>
-            <h3>Programming</h3>
-            <ul class="list">
-              <li>MATLAB / Simulink</li>
-              <li>Python</li>
-              <li>LaTeX</li>
-            </ul>
-          </div>
 
           <div>
-            <h3>Engineering Software and Tools</h3>
+
+            <h3>
+              Programming
+            </h3>
+
             <ul class="list">
-              <li>ANSYS, Abaqus</li>
-              <li>SolidWorks, Inventor, AutoCAD, CATIA</li>
-              <li>PEC battery tester</li>
-              <li>Microsoft Office</li>
+
+              <li>
+                MATLAB / Simulink
+              </li>
+
+              <li>
+                Python
+              </li>
+
+              <li>
+                LaTeX
+              </li>
+
             </ul>
+
           </div>
+
+
+          <div>
+
+            <h3>
+              Engineering Software and Tools
+            </h3>
+
+            <ul class="list">
+
+              <li>
+                ANSYS, Abaqus
+              </li>
+
+              <li>
+                SolidWorks, Inventor, AutoCAD, CATIA
+              </li>
+
+              <li>
+                PEC battery tester
+              </li>
+
+              <li>
+                Microsoft Office
+              </li>
+
+            </ul>
+
+          </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="contact" class="page-section">
+
+    <!-- =========================================================
+         CONTACT
+         ========================================================= -->
+    <section
+      id="contact"
+      class="page-section">
+
       <div class="section-card">
+
         <h2>Contact</h2>
+
 
         <p>
           <strong>Email:</strong>
-          <a href="mailto:barat@ku.edu">barat@ku.edu</a>
+
+          <a href="mailto:barat@ku.edu">
+            barat@ku.edu
+          </a>
         </p>
+
 
         <p>
           <strong>Website:</strong>
-          <a href="https://farzanehbarat.github.io/"
-             target="_blank"
-             rel="noopener noreferrer">
+
+          <a
+            href="https://farzanehbarat.github.io/"
+            target="_blank"
+            rel="noopener noreferrer">
             farzanehbarat.github.io
           </a>
         </p>
 
+
         <p>
           <strong>Google Scholar:</strong>
-          <a href="https://scholar.google.com/citations?hl=en&user=KrAn6_gAAAAJ"
-             target="_blank"
-             rel="noopener noreferrer">
+
+          <a
+            href="https://scholar.google.com/citations?hl=en&user=KrAn6_gAAAAJ"
+            target="_blank"
+            rel="noopener noreferrer">
             Google Scholar Profile
           </a>
         </p>
 
+
         <p>
           <strong>LinkedIn:</strong>
-          <a href="https://www.linkedin.com/in/farzaneh-barat-59b69525b/"
-             target="_blank"
-             rel="noopener noreferrer">
+
+          <a
+            href="https://www.linkedin.com/in/farzaneh-barat-59b69525b/"
+            target="_blank"
+            rel="noopener noreferrer">
             LinkedIn Profile
           </a>
         </p>
 
+
         <p>
           <strong>GitHub:</strong>
-          <a href="https://github.com/farzanehbarat"
-             target="_blank"
-             rel="noopener noreferrer">
+
+          <a
+            href="https://github.com/farzanehbarat"
+            target="_blank"
+            rel="noopener noreferrer">
             github.com/farzanehbarat
           </a>
         </p>
 
-        <p>
+
+        <p style="margin-top: 20px;">
           Department of Mechanical Engineering<br />
           University of Kansas<br />
           Lawrence, KS, USA
         </p>
+
       </div>
+
     </section>
+
+
   </main>
 
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
   <footer class="site-footer">
-    <p>© 2026 Farzaneh Barat. All rights reserved.</p>
+
+    <p>
+      © 2026 Farzaneh Barat. All rights reserved.
+    </p>
+
   </footer>
 
+
+  <!-- =========================================================
+       PAGE NAVIGATION SCRIPT
+       ========================================================= -->
   <script>
-    const buttons = document.querySelectorAll(".nav-button");
-    const sections = document.querySelectorAll(".page-section");
+
+    const buttons =
+      document.querySelectorAll(".nav-button");
+
+    const sections =
+      document.querySelectorAll(".page-section");
+
 
     function showPage(pageId, updateHash = true) {
+
       sections.forEach(section => {
         section.classList.remove("active");
       });
+
 
       buttons.forEach(button => {
         button.classList.remove("active");
       });
 
-      const selectedSection = document.getElementById(pageId);
+
+      const selectedSection =
+        document.getElementById(pageId);
+
 
       if (!selectedSection) {
-        document.getElementById("home").classList.add("active");
+
+        document
+          .getElementById("home")
+          .classList.add("active");
+
         return;
       }
 
+
       selectedSection.classList.add("active");
 
-      document.querySelectorAll(`[data-page="${pageId}"]`).forEach(button => {
-        button.classList.add("active");
-      });
+
+      document
+        .querySelectorAll(
+          `[data-page="${pageId}"]`
+        )
+        .forEach(button => {
+
+          button.classList.add("active");
+
+        });
+
 
       if (updateHash) {
-        history.pushState(null, "", "#" + pageId);
+
+        history.pushState(
+          null,
+          "",
+          "#" + pageId
+        );
+
       }
+
 
       window.scrollTo({
         top: 0,
         behavior: "instant"
       });
+
     }
 
+
     buttons.forEach(button => {
-      button.addEventListener("click", function () {
-        const pageId = this.getAttribute("data-page");
-        showPage(pageId);
-      });
+
+      button.addEventListener(
+        "click",
+        function () {
+
+          const pageId =
+            this.getAttribute("data-page");
+
+          showPage(pageId);
+
+        }
+      );
+
     });
 
-    window.addEventListener("popstate", function () {
-      const pageId = window.location.hash.replace("#", "") || "home";
-      showPage(pageId, false);
-    });
 
-    window.addEventListener("load", function () {
-      const pageId = window.location.hash.replace("#", "") || "home";
-      showPage(pageId, false);
-    });
+    window.addEventListener(
+      "popstate",
+      function () {
+
+        const pageId =
+          window.location.hash.replace("#", "")
+          || "home";
+
+        showPage(
+          pageId,
+          false
+        );
+
+      }
+    );
+
+
+    window.addEventListener(
+      "load",
+      function () {
+
+        const pageId =
+          window.location.hash.replace("#", "")
+          || "home";
+
+        showPage(
+          pageId,
+          false
+        );
+
+      }
+    );
+
   </script>
+
 </body>
+
 </html>
