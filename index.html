@@ -108,6 +108,7 @@
     .hero .lead + .lead { margin-top: 12px; }
     .now-label { margin-top: 22px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
     .now { list-style: none; margin-top: 8px; max-width: 640px; }
+    .now li strong { color: var(--ink); font-weight: 600; }
     .now li { position: relative; padding-left: 20px; margin-top: 6px; }
     .now li::before { content: ""; position: absolute; left: 2px; top: 0.62em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 
@@ -327,19 +328,22 @@
 
         <h1>Farzaneh Barat</h1>
         <p class="role">
-          <strong>Ph.D. Student, Mechanical Engineering</strong> · University of Kansas · Lawrence, KS
+          <strong>Ph.D. Student in Mechanical Engineering</strong> · University of Kansas
         </p>
 
         <p class="lead">
-          I build methods to estimate what is happening inside a lithium-ion battery that
-          cannot be measured directly: its state of charge, its internal parameters, and its
-          health, together with how much each estimate can be trusted.
+          My research develops uncertainty-aware estimation, identification, and control
+          methods for lithium-ion batteries. I combine physics-based models with ensemble
+          Bayesian inference and machine learning to infer what sensors cannot measure
+          directly (state of charge, model parameters, and state of health) and to
+          quantify how much each estimate can be trusted.
         </p>
-        <p class="now-label">Right now I am working on</p>
+        <p class="now-label">Current focus</p>
         <ul class="now">
-          <li>Tracking battery model parameters online as a cell ages, using sequential Ensemble Kalman Inversion.</li>
-          <li>Making state-of-charge estimates robust to model error by adding a neural ODE to a physics-based observer.</li>
-          <li>Testing second-life cells in the lab (coin cells, fast charging, dQ/dV) to judge their health and reuse potential.</li>
+          <li><strong>Online parameter identification:</strong> sequential Ensemble Kalman Inversion for nonlinear stochastic state-space models.</li>
+          <li><strong>Robust state-of-charge estimation:</strong> physics-based observers augmented with neural ODEs to compensate for model error.</li>
+          <li><strong>Thermal management &amp; smart charging:</strong> model-based control on coupled electro-thermal models to limit temperature nonuniformity and degradation.</li>
+          <li><strong>Second-life batteries:</strong> laboratory characterization of retired modules (capacity, HPPC, dQ/dV, dynamic cycling) to assess reuse potential.</li>
         </ul>
 
         <div class="actions">
@@ -448,8 +452,8 @@
             <div>
               <p class="pub-title">System Identification of Lithium-Ion Battery Equivalent Circuit Models Using Ensemble Kalman Inversion</p>
               <p class="pub-authors"><span class="me">F. Barat</span>, S. Wilson, H. Kim, and H. Fang</p>
-              <p class="pub-venue"><em>Proceedings of the 2026 American Control Conference (ACC)</em>, 2026<span class="badge accepted">Accepted</span></p>
-              <div class="pub-links"><a href="https://arxiv.org/abs/2604.10813" target="_blank" rel="noopener">arXiv</a></div>
+              <p class="pub-venue"><em>Proceedings of the 2026 American Control Conference (ACC)</em>, 2026</p>
+              <div class="pub-links"><a href="https://ieeexplore.ieee.org/abstract/document/11616140" target="_blank" rel="noopener">IEEE Xplore</a><a href="https://arxiv.org/abs/2604.10813" target="_blank" rel="noopener">arXiv</a></div>
             </div>
           </li>
           <li class="pub">
@@ -477,9 +481,12 @@
           <p class="entry-date">Aug 2023 – Present</p>
           <div class="entry-body">
             <ul>
-              <li>Developing Ensemble Kalman Inversion methods for battery model identification (ACC 2026; journal under review).</li>
-              <li>Designing a neural-ODE-enhanced SOC observer for robust state-of-charge estimation.</li>
-              <li>Hands-on cell work: coin-cell assembly, fast-charge testing, and dQ/dV analysis of second-life lithium-ion modules on a PEC battery tester.</li>
+              <li>Developed an Ensemble Kalman Inversion framework for uncertainty-aware identification of battery equivalent-circuit and electro-thermal models (ACC 2026; IEEE TCST under review).</li>
+              <li>Developed a sequentialized EnKI method that couples local particle filtering with Kalman-type parameter updates for online identification of nonlinear stochastic state-space models, benchmarked against augmented and dual EKF/UKF (CDC 2026).</li>
+              <li>Designing a neural-ODE-enhanced observer that corrects model error in state-of-charge estimation for a nonlinear double-capacitor battery model (submitted to ACC 2027).</li>
+              <li>Developing model-based thermal-management and smart-charging control on coupled electro-thermal models for cylindrical and pouch cells.</li>
+              <li>Characterizing retired lithium-ion modules (capacity, HPPC, dynamic cycling, thermal, dQ/dV) and running coin-cell assembly and fast-charge tests on a PEC battery tester.</li>
+              <li>Building state-of-health-aware models from degradation features for demanding applications such as eVTOL.</li>
             </ul>
           </div>
         </div>
