@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Farzaneh Barat | Battery Modeling & Probabilistic Estimation</title>
-  <meta name="description" content="Farzaneh Barat is a Ph.D. student in Mechanical Engineering at the University of Kansas working on uncertainty-aware modeling, parameter identification, and health diagnostics for lithium-ion batteries, with five years of prior industrial R&D experience." />
+  <meta name="description" content="Farzaneh Barat is a Ph.D. student in Mechanical Engineering at the University of Kansas working on uncertainty-aware modeling, parameter identification, and health diagnostics for lithium-ion batteries." />
   <link rel="canonical" href="https://farzanehbarat.github.io/" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="apple-touch-icon" href="assets/logo.svg" />
 
   <!-- Social preview (LinkedIn, Slack, email) -->
   <meta property="og:type" content="profile" />
@@ -67,6 +69,7 @@
     .brand {
       font-family: var(--serif); font-weight: 700; font-size: 1.2rem;
       color: var(--ink); white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 10px;
     }
     .brand:hover { text-decoration: none; }
     .nav-links { display: flex; gap: 4px; list-style: none; }
@@ -103,6 +106,10 @@
     .hero .role strong { color: var(--text); font-weight: 600; }
     .hero .lead { font-size: 1.12rem; color: var(--text); max-width: 640px; }
     .hero .lead + .lead { margin-top: 12px; }
+    .now-label { margin-top: 22px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .now { list-style: none; margin-top: 8px; max-width: 640px; }
+    .now li { position: relative; padding-left: 20px; margin-top: 6px; }
+    .now li::before { content: ""; position: absolute; left: 2px; top: 0.62em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 
     .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
     .btn {
@@ -183,7 +190,6 @@
     }
     .badge.accepted { background: #e9f6ef; color: #1d6b45; }
     .badge.review { background: #fdf3e3; color: #8a5a12; }
-    .badge.prep { background: var(--soft); color: var(--muted); border: 1px solid var(--line); }
     .pub-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; font-size: 0.9rem; font-weight: 600; }
 
     /* Timeline (experience / education) */
@@ -299,7 +305,7 @@
 
   <header class="site-header">
     <nav class="navbar" aria-label="Main">
-      <a class="brand" href="#top">Farzaneh Barat</a>
+      <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="30" height="30" /><span>Farzaneh Barat</span></a>
       <ul class="nav-links">
         <li><a href="#research">Research</a></li>
         <li><a href="#publications">Publications</a></li>
@@ -317,7 +323,6 @@
     <!-- ================= HERO ================= -->
     <section class="hero" id="top">
       <div>
-        <span class="status">Seeking Summer 2027 internships · open to any US location</span>
 
         <h1>Farzaneh Barat</h1>
         <p class="role">
@@ -325,15 +330,16 @@
         </p>
 
         <p class="lead">
-          I develop uncertainty-aware methods for modeling, identifying, and diagnosing
-          lithium-ion batteries, combining probabilistic machine learning (Ensemble Kalman
-          Inversion, particle filtering, neural ODEs) with hands-on cell testing and
-          characterization of second-life battery modules.
+          I build methods to estimate what is happening inside a lithium-ion battery that
+          cannot be measured directly: its state of charge, its internal parameters, and its
+          health, together with how much each estimate can be trusted.
         </p>
-        <p class="lead">
-          Before my Ph.D., I spent five years in industrial R&amp;D, including as Head of R&amp;D,
-          so I care about methods that work on real hardware and real data.
-        </p>
+        <p class="now-label">Right now I am working on</p>
+        <ul class="now">
+          <li>Tracking battery model parameters online as a cell ages, using sequential Ensemble Kalman Inversion.</li>
+          <li>Making state-of-charge estimates robust to model error by adding a neural ODE to a physics-based observer.</li>
+          <li>Testing second-life cells in the lab (coin cells, fast charging, dQ/dV) to judge their health and reuse potential.</li>
+        </ul>
 
         <div class="actions">
           <a class="btn primary" href="assets/CV.pdf" target="_blank" rel="noopener">Download CV</a>
@@ -349,38 +355,10 @@
       </div>
     </section>
 
-    <!-- ============ AT A GLANCE ============ -->
-    <div class="highlights" aria-label="Highlights">
-      <div class="highlight">
-        <div class="big">5 years</div>
-        <div class="small">Industrial R&amp;D, incl. Head of R&amp;D</div>
-      </div>
-      <div class="highlight">
-        <div class="big">ACC 2026</div>
-        <div class="small">Battery system identification via EnKI</div>
-      </div>
-      <div class="highlight">
-        <div class="big">IEEE TCST</div>
-        <div class="small">Journal under review · ACC 2027 submitted</div>
-      </div>
-      <div class="highlight">
-        <div class="big">3rd Place</div>
-        <div class="small">KU Graduate Research Showcase 2025</div>
-      </div>
-    </div>
-
     <!-- ================= RESEARCH ================= -->
     <section class="section" id="research">
       <h2>Research</h2>
-      <div>
-        <h3>Battery systems</h3>
-        <div class="projects">
-          <article class="project">
-            <h4>Parameter Identification of Battery Models</h4>
-            <p>Uncertainty-aware calibration of equivalent-circuit and nonlinear battery state-space models from voltage and temperature measurements using Ensemble Kalman Inversion.</p>
-            <div class="tags"><span class="tag">EnKI</span><span class="tag">ECMs</span><span class="tag">Electro-thermal</span></div>
-          </article>
-
+      <div class="projects">
           <article class="project">
             <h4>Neural-Network-Enhanced SOC Observer</h4>
             <p>Robust state-of-charge estimation that pairs a nominal nonlinear double-capacitor (NDC) Luenberger observer with a neural ODE that learns the SOC residual from sparse labels, evaluated on standard drive cycles (UDDS, LA92, US06, SC04).</p>
@@ -388,9 +366,15 @@
           </article>
 
           <article class="project">
-            <h4>Health Diagnostics &amp; SOH-Aware Modeling</h4>
-            <p>Extracting degradation features and building state-of-health-aware models for reliable health estimation in demanding applications such as eVTOL systems.</p>
-            <div class="tags"><span class="tag">SOH</span><span class="tag">Degradation</span><span class="tag">eVTOL</span></div>
+            <h4>Recursive Parameter Identification of Nonlinear Stochastic State-Space Models</h4>
+            <p>A sequentialized Ensemble Kalman Inversion (SEnKI) framework for online identification with latent states, combining a local particle filter with Kalman-type parameter updates. Validated on an NDC battery model and a nonlinear benchmark against augmented and dual EKF/UKF.</p>
+            <div class="tags"><span class="tag">Sequential EnKI</span><span class="tag">Particle filtering</span><span class="tag">Online ID</span></div>
+          </article>
+
+          <article class="project">
+            <h4>Parameter Identification of Battery Models</h4>
+            <p>Uncertainty-aware calibration of equivalent-circuit and nonlinear battery state-space models from voltage and temperature measurements using Ensemble Kalman Inversion.</p>
+            <div class="tags"><span class="tag">EnKI</span><span class="tag">ECMs</span><span class="tag">Electro-thermal</span></div>
           </article>
 
           <article class="project">
@@ -398,14 +382,11 @@
             <p>Experimental testing, diagnostic characterization, and physics-informed modeling of second-life modules to assess degradation, safety, and reuse potential under practical operating and mechanical conditions.</p>
             <div class="tags"><span class="tag">Battery testing</span><span class="tag">Physics-informed</span><span class="tag">Safety</span></div>
           </article>
-        </div>
 
-        <h3>Probabilistic estimation &amp; control</h3>
-        <div class="projects">
           <article class="project">
-            <h4>Recursive Parameter Identification of Nonlinear Stochastic State-Space Models</h4>
-            <p>A sequentialized Ensemble Kalman Inversion (SEnKI) framework for online identification with latent states, combining a local particle filter with Kalman-type parameter updates. Validated on an NDC battery model and a nonlinear benchmark against augmented and dual EKF/UKF.</p>
-            <div class="tags"><span class="tag">Sequential EnKI</span><span class="tag">Particle filtering</span><span class="tag">Online ID</span></div>
+            <h4>Health Diagnostics &amp; SOH-Aware Modeling</h4>
+            <p>Extracting degradation features and building state-of-health-aware models for reliable health estimation in demanding applications such as eVTOL systems.</p>
+            <div class="tags"><span class="tag">SOH</span><span class="tag">Degradation</span><span class="tag">eVTOL</span></div>
           </article>
 
           <article class="project">
@@ -419,24 +400,13 @@
             <p>Solving continuous-time optimal control problems from Pontryagin's Minimum Principle as boundary-value problems via probabilistic estimation and smoothing, with built-in uncertainty quantification.</p>
             <div class="tags"><span class="tag">Optimal control</span><span class="tag">Probabilistic numerics</span><span class="tag">Smoothing</span></div>
           </article>
-        </div>
       </div>
     </section>
 
     <!-- ================= PUBLICATIONS ================= -->
     <section class="section" id="publications">
       <h2>Publications</h2>
-      <div>
-        <h3>Under review &amp; in preparation</h3>
-        <ol class="pubs">
-          <li class="pub">
-            <span class="venue-chip">TCST</span>
-            <div>
-              <p class="pub-title">System identification of nonlinear state-space models using Ensemble Kalman Inversion with application to lithium-ion batteries</p>
-              <p class="pub-authors"><span class="me">F. Barat</span> and H. Fang</p>
-              <p class="pub-venue"><em>IEEE Transactions on Control Systems Technology</em><span class="badge review">Under review</span></p>
-            </div>
-          </li>
+      <ol class="pubs">
           <li class="pub">
             <span class="venue-chip">ACC 2027</span>
             <div>
@@ -453,10 +423,15 @@
               <p class="pub-venue">Manuscript in preparation</p>
             </div>
           </li>
-        </ol>
-
-        <h3>Conference papers</h3>
-        <ol class="pubs">
+          <li class="pub">
+            <span class="venue-chip">TCST</span>
+            <div>
+              <p class="pub-title">System identification of nonlinear state-space models using Ensemble Kalman Inversion with application to lithium-ion batteries</p>
+              <p class="pub-authors"><span class="me">F. Barat</span> and H. Fang</p>
+              <p class="pub-venue"><em>IEEE Transactions on Control Systems Technology</em><span class="badge review">Under review</span></p>
+            </div>
+          </li>
+          <!-- CDC paper: copy one <li class="pub"> block here and fill in title, authors, venue, year, DOI -->
           <li class="pub">
             <span class="venue-chip">ACC 2026</span>
             <div>
@@ -464,6 +439,15 @@
               <p class="pub-authors"><span class="me">F. Barat</span>, S. Wilson, H. Kim, and H. Fang</p>
               <p class="pub-venue"><em>Proceedings of the 2026 American Control Conference (ACC)</em>, 2026<span class="badge accepted">Accepted</span></p>
               <div class="pub-links"><a href="https://arxiv.org/abs/2604.10813" target="_blank" rel="noopener">arXiv</a></div>
+            </div>
+          </li>
+          <li class="pub">
+            <span class="venue-chip">Robotica</span>
+            <div>
+              <p class="pub-title">Solving nonlinear optimal path tracking problem using a new closed-loop direct-indirect optimization method: Application on mechanical manipulators</p>
+              <p class="pub-authors">M. Irani Rahaghi and <span class="me">F. Barat</span></p>
+              <p class="pub-venue"><em>Robotica</em>, vol. 37, no. 1, pp. 39–61, Jan. 2019</p>
+              <div class="pub-links"><a href="https://doi.org/10.1017/S0263574718000851" target="_blank" rel="noopener">DOI</a></div>
             </div>
           </li>
           <li class="pub">
@@ -475,21 +459,7 @@
               <div class="pub-links"><a href="https://doi.org/10.1109/KBEI.2019.8734913" target="_blank" rel="noopener">DOI</a></div>
             </div>
           </li>
-        </ol>
-
-        <h3>Journal articles</h3>
-        <ol class="pubs">
-          <li class="pub">
-            <span class="venue-chip">Robotica</span>
-            <div>
-              <p class="pub-title">Solving nonlinear optimal path tracking problem using a new closed-loop direct-indirect optimization method: Application on mechanical manipulators</p>
-              <p class="pub-authors">M. Irani Rahaghi and <span class="me">F. Barat</span></p>
-              <p class="pub-venue"><em>Robotica</em>, vol. 37, no. 1, pp. 39–61, Jan. 2019</p>
-              <div class="pub-links"><a href="https://doi.org/10.1017/S0263574718000851" target="_blank" rel="noopener">DOI</a></div>
-            </div>
-          </li>
-        </ol>
-      </div>
+      </ol>
     </section>
 
     <!-- ================= EXPERIENCE ================= -->
@@ -522,21 +492,6 @@
 
         <div class="entry">
           <div>
-            <p class="entry-title">Head of R&amp;D / Mechanical Designer</p>
-            <p class="entry-org">Diana Tajhiz Spadana Co. and SEMAG Co. · Isfahan, Iran</p>
-          </div>
-          <p class="entry-date">Apr 2018 – Jun 2023</p>
-          <div class="entry-body">
-            <ul>
-              <li>Led R&amp;D and mechanical design projects for industrial product development.</li>
-              <!-- Add 2–3 concrete bullets here: what products you designed or launched,
-                   team size you managed, and any measurable result (cost, time, yield). -->
-            </ul>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div>
             <p class="entry-title">Teaching Assistant &amp; Instructor</p>
             <p class="entry-org">University of Kashan · Kashan, Iran</p>
           </div>
@@ -564,7 +519,7 @@
             <p class="entry-org">University of Kashan · Kashan, Iran</p>
           </div>
           <p class="entry-date">Sep 2015 – Feb 2018</p>
-          <div class="entry-body">Thesis: Optimal path tracking and load-carrying capacity of manipulators via a closed-loop combined optimization method. Ranked 4th in cohort.</div>
+          <div class="entry-body">Thesis: Optimal path tracking and load-carrying capacity of manipulators via a closed-loop combined optimization method.</div>
         </div>
 
         <div class="entry">
@@ -595,7 +550,7 @@
 
     <!-- ================= SKILLS & AWARDS ================= -->
     <section class="section" id="skills">
-      <h2>Skills &amp; Awards</h2>
+      <h2>Skills</h2>
       <div>
         <div class="skill-groups">
           <div>
@@ -643,13 +598,6 @@
             </div>
           </div>
         </div>
-
-        <h3 style="margin-top: 36px;">Honors</h3>
-        <ul class="awards">
-          <li><span>3rd Place, KU Graduate Student Research Showcase</span><span class="yr">2025</span></li>
-          <li><span>Ranked 4th, M.Sc. Mechanical Engineering cohort, University of Kashan</span><span class="yr">2018</span></li>
-          <li><span>Ranked 1st, B.Sc. Heat and Fluid Mechanics, University of Kashan</span><span class="yr">2015</span></li>
-        </ul>
       </div>
     </section>
 
