@@ -211,6 +211,7 @@
     .talk-title { font-weight: 600; color: var(--ink); }
     .talk-meta { color: var(--muted); font-size: 0.93rem; margin-bottom: 8px; }
     .talk p { font-size: 0.96rem; }
+    .talk + .talk { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
     .talk .ref { margin-top: 10px; color: var(--muted); font-size: 0.92rem; }
 
     /* Skills */
@@ -546,6 +547,18 @@
     <!-- ================= TALKS ================= -->
     <section class="section" id="talks">
       <h2>Talks</h2>
+      <div>
+      <div class="talk">
+        <p class="talk-title">Neural SDE: Stabilizing Neural ODE Networks with Stochastic Noise</p>
+        <p class="talk-meta">Paper presentation · University of Kansas · 2026</p>
+        <p>How adding a learned diffusion term to neural ODEs acts as stochastic regularization, the stability theory behind it (stochastic and almost-sure exponential stability under Lipschitz drift), gradient computation through SDE solvers, and the resulting gains in generalization and robustness to input perturbations.</p>
+        <p class="ref">Paper: X. Liu, T. Xiao, S. Si, Q. Cao, S. Kumar, and C.-J. Hsieh, arXiv:1906.02355, 2019.</p>
+        <div class="pub-links">
+          <a href="assets/Neural_SDE_Presentation.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
+          <a href="https://arxiv.org/abs/1906.02355" target="_blank" rel="noopener">Original paper</a>
+        </div>
+      </div>
+
       <div class="talk">
         <p class="talk-title">Latent Matters: Learning Deep State-Space Models</p>
         <p class="talk-meta">Paper presentation · University of Kansas · 2026</p>
@@ -556,6 +569,8 @@
           <a href="https://proceedings.neurips.cc/paper/2021/hash/54b2b21af94108d83c2a909d5b0a6a50-Abstract.html" target="_blank" rel="noopener">Original paper</a>
         </div>
       </div>
+      </div>
+    
     </section>
 
     <!-- ================= SKILLS & AWARDS ================= -->
