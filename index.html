@@ -162,6 +162,7 @@
     }
     .project h4 { font-size: 1.02rem; color: var(--ink); line-height: 1.4; margin-bottom: 8px; }
     .project p { font-size: 0.95rem; color: var(--text); }
+    .project p.project-date { font-size: 0.85rem; color: var(--muted); margin: -4px 0 8px; }
     .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
     .tag {
       font-size: 0.78rem; font-weight: 600; color: var(--accent);
@@ -361,7 +362,7 @@
       <div class="projects">
           <article class="project">
             <h4>Neural-Network-Enhanced SOC Observer</h4>
-            <p>Robust state-of-charge estimation that pairs a nominal nonlinear double-capacitor (NDC) Luenberger observer with a neural ODE that learns the SOC residual from sparse labels, evaluated on standard drive cycles (UDDS, LA92, US06, SC04).</p>
+            <p>Robust state-of-charge estimation that pairs a nominal nonlinear double-capacitor (NDC) Luenberger observer with a neural ODE that learns the SOC residual from sparse labels.</p>
             <div class="tags"><span class="tag">Neural ODE</span><span class="tag">Observer design</span><span class="tag">SOC</span></div>
           </article>
 
@@ -378,21 +379,16 @@
           </article>
 
           <article class="project">
-            <h4>Second-Life Lithium-Ion Battery Systems</h4>
-            <p>Experimental testing, diagnostic characterization, and physics-informed modeling of second-life modules to assess degradation, safety, and reuse potential under practical operating and mechanical conditions.</p>
-            <div class="tags"><span class="tag">Battery testing</span><span class="tag">Physics-informed</span><span class="tag">Safety</span></div>
+            <h4>Thermal Management, Smart Charging &amp; Second-Life Batteries</h4>
+            <p class="project-date">2026 – Present</p>
+            <p>Developing model-based thermal-management and smart-charging control on coupled electro-thermal models to regulate temperature, reduce nonuniformity, and mitigate degradation in cylindrical and pouch cells. Characterizing retired modules (capacity, HPPC, dynamic cycling, thermal) to evaluate degradation and support physics-informed modeling and diagnostics for energy-storage reuse.</p>
+            <div class="tags"><span class="tag">Thermal management</span><span class="tag">Smart charging</span><span class="tag">Second-life</span><span class="tag">HPPC</span></div>
           </article>
 
           <article class="project">
             <h4>Health Diagnostics &amp; SOH-Aware Modeling</h4>
             <p>Extracting degradation features and building state-of-health-aware models for reliable health estimation in demanding applications such as eVTOL systems.</p>
             <div class="tags"><span class="tag">SOH</span><span class="tag">Degradation</span><span class="tag">eVTOL</span></div>
-          </article>
-
-          <article class="project">
-            <h4>Non-Gaussian Sequential Forecasting</h4>
-            <p>Integrating Gaussian anamorphosis (CDF transforms) with Ensemble Kalman Inversion, particle filtering, and deep latent state-space models to forecast sequences whose uncertainty is far from Gaussian.</p>
-            <div class="tags"><span class="tag">Gaussian anamorphosis</span><span class="tag">Deep SSMs</span><span class="tag">Forecasting</span></div>
           </article>
 
           <article class="project">
@@ -406,39 +402,15 @@
     <!-- ================= PUBLICATIONS ================= -->
     <section class="section" id="publications">
       <h2>Publications</h2>
-      <ol class="pubs">
-          <li class="pub">
-            <span class="venue-chip">ACC 2027</span>
-            <div>
-              <p class="pub-title">Robust State-of-Charge Estimation for Lithium-Ion Batteries by Neural Network-Enhanced Observer Design</p>
-              <p class="pub-authors"><span class="me">F. Barat</span>, R. Carter, and H. Fang</p>
-              <p class="pub-venue"><em>American Control Conference (ACC) 2027</em><span class="badge review">Submitted</span></p>
-            </div>
-          </li>
-          <li class="pub">
-            <span class="venue-chip">In prep.</span>
-            <div>
-              <p class="pub-title">Recursive Parameter Identification of Nonlinear Stochastic State-Space Models via Sequentialized Ensemble Kalman Inversion</p>
-              <p class="pub-authors"><span class="me">F. Barat</span>, S. Wilson, and H. Fang</p>
-              <p class="pub-venue">Manuscript in preparation</p>
-            </div>
-          </li>
+      <div>
+        <h3>Journal articles</h3>
+        <ol class="pubs">
           <li class="pub">
             <span class="venue-chip">TCST</span>
             <div>
               <p class="pub-title">System identification of nonlinear state-space models using Ensemble Kalman Inversion with application to lithium-ion batteries</p>
               <p class="pub-authors"><span class="me">F. Barat</span> and H. Fang</p>
               <p class="pub-venue"><em>IEEE Transactions on Control Systems Technology</em><span class="badge review">Under review</span></p>
-            </div>
-          </li>
-          <!-- CDC paper: copy one <li class="pub"> block here and fill in title, authors, venue, year, DOI -->
-          <li class="pub">
-            <span class="venue-chip">ACC 2026</span>
-            <div>
-              <p class="pub-title">System Identification of Lithium-Ion Battery Equivalent Circuit Models Using Ensemble Kalman Inversion</p>
-              <p class="pub-authors"><span class="me">F. Barat</span>, S. Wilson, H. Kim, and H. Fang</p>
-              <p class="pub-venue"><em>Proceedings of the 2026 American Control Conference (ACC)</em>, 2026<span class="badge accepted">Accepted</span></p>
-              <div class="pub-links"><a href="https://arxiv.org/abs/2604.10813" target="_blank" rel="noopener">arXiv</a></div>
             </div>
           </li>
           <li class="pub">
@@ -450,6 +422,36 @@
               <div class="pub-links"><a href="https://doi.org/10.1017/S0263574718000851" target="_blank" rel="noopener">DOI</a></div>
             </div>
           </li>
+        </ol>
+
+        <h3>Conference papers</h3>
+        <ol class="pubs">
+          <li class="pub">
+            <span class="venue-chip">ACC 2027</span>
+            <div>
+              <p class="pub-title">Robust State-of-Charge Estimation for Lithium-Ion Batteries by Neural Network-Enhanced Observer Design</p>
+              <p class="pub-authors"><span class="me">F. Barat</span>, R. Carter, and H. Fang</p>
+              <p class="pub-venue"><em>American Control Conference (ACC) 2027</em><span class="badge review">Submitted</span></p>
+            </div>
+          </li>
+          <li class="pub">
+            <span class="venue-chip">CDC 2026</span>
+            <div>
+              <p class="pub-title">Recursive Parameter Identification of Nonlinear Stochastic State-Space Models via Sequentialized Ensemble Kalman Inversion</p>
+              <p class="pub-authors"><span class="me">F. Barat</span>, R. Carter, S. Wilson, and H. Fang</p>
+              <p class="pub-venue"><em>Proceedings of the 2026 IEEE Conference on Decision and Control (CDC)</em>, 2026<span class="badge accepted">Accepted</span></p>
+              <div class="pub-links"><a href="https://arxiv.org/abs/2609.22704" target="_blank" rel="noopener">arXiv</a></div>
+            </div>
+          </li>
+          <li class="pub">
+            <span class="venue-chip">ACC 2026</span>
+            <div>
+              <p class="pub-title">System Identification of Lithium-Ion Battery Equivalent Circuit Models Using Ensemble Kalman Inversion</p>
+              <p class="pub-authors"><span class="me">F. Barat</span>, S. Wilson, H. Kim, and H. Fang</p>
+              <p class="pub-venue"><em>Proceedings of the 2026 American Control Conference (ACC)</em>, 2026<span class="badge accepted">Accepted</span></p>
+              <div class="pub-links"><a href="https://arxiv.org/abs/2604.10813" target="_blank" rel="noopener">arXiv</a></div>
+            </div>
+          </li>
           <li class="pub">
             <span class="venue-chip">ICEE 2019</span>
             <div>
@@ -459,7 +461,8 @@
               <div class="pub-links"><a href="https://doi.org/10.1109/KBEI.2019.8734913" target="_blank" rel="noopener">DOI</a></div>
             </div>
           </li>
-      </ol>
+        </ol>
+      </div>
     </section>
 
     <!-- ================= EXPERIENCE ================= -->
@@ -475,7 +478,7 @@
           <div class="entry-body">
             <ul>
               <li>Developing Ensemble Kalman Inversion methods for battery model identification (ACC 2026; journal under review).</li>
-              <li>Designing a neural-ODE-enhanced SOC observer trained on standard drive cycles (UDDS, LA92, US06, SC04).</li>
+              <li>Designing a neural-ODE-enhanced SOC observer for robust state-of-charge estimation.</li>
               <li>Hands-on cell work: coin-cell assembly, fast-charge testing, and dQ/dV analysis of second-life lithium-ion modules on a PEC battery tester.</li>
             </ul>
           </div>
