@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FB monogram">
+  <rect width="64" height="64" rx="14" fill="#14213d"/>
+  <g fill="none" stroke="#ffffff" stroke-width="4.6" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M15 16.3 V47.7 M12.7 16.3 H27 M15 31 H25"/>
+    <path d="M33 13.9 V50.1"/>
+    <path d="M30.7 16.3 H40.5 a7.35 7.35 0 0 1 0 14.7 H33"/>
+    <path d="M33 31 H41.5 a8.35 8.35 0 0 1 0 16.7 H30.7"/>
+  </g>
+</svg>
