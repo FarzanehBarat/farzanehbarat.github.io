@@ -183,6 +183,7 @@
     }
     .badge.accepted { background: #e9f6ef; color: #1d6b45; }
     .badge.review { background: #fdf3e3; color: #8a5a12; }
+    .badge.prep { background: var(--soft); color: var(--muted); border: 1px solid var(--line); }
     .pub-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; font-size: 0.9rem; font-weight: 600; }
 
     /* Timeline (experience / education) */
@@ -283,6 +284,8 @@
       "Parameter identification",
       "Ensemble Kalman Inversion",
       "State-space models",
+      "Neural ODEs",
+      "State-of-charge estimation",
       "Electro-thermal analysis",
       "Battery health diagnostics",
       "Second-life battery systems"
@@ -314,8 +317,7 @@
     <!-- ================= HERO ================= -->
     <section class="hero" id="top">
       <div>
-        <!-- Edit or remove this line depending on what you are looking for -->
-        <span class="status">Open to research &amp; industry internships</span>
+        <span class="status">Seeking Summer 2027 internships · open to any US location</span>
 
         <h1>Farzaneh Barat</h1>
         <p class="role">
@@ -324,8 +326,9 @@
 
         <p class="lead">
           I develop uncertainty-aware methods for modeling, identifying, and diagnosing
-          lithium-ion batteries, from Ensemble Kalman Inversion for nonlinear state-space
-          models to experimental characterization of second-life battery modules.
+          lithium-ion batteries, combining probabilistic machine learning (Ensemble Kalman
+          Inversion, particle filtering, neural ODEs) with hands-on cell testing and
+          characterization of second-life battery modules.
         </p>
         <p class="lead">
           Before my Ph.D., I spent five years in industrial R&amp;D, including as Head of R&amp;D,
@@ -358,7 +361,7 @@
       </div>
       <div class="highlight">
         <div class="big">IEEE TCST</div>
-        <div class="small">Journal article under review</div>
+        <div class="small">Journal under review · ACC 2027 submitted</div>
       </div>
       <div class="highlight">
         <div class="big">3rd Place</div>
@@ -379,6 +382,12 @@
           </article>
 
           <article class="project">
+            <h4>Neural-Network-Enhanced SOC Observer</h4>
+            <p>Robust state-of-charge estimation that pairs a nominal nonlinear double-capacitor (NDC) Luenberger observer with a neural ODE that learns the SOC residual from sparse labels, evaluated on standard drive cycles (UDDS, LA92, US06, SC04).</p>
+            <div class="tags"><span class="tag">Neural ODE</span><span class="tag">Observer design</span><span class="tag">SOC</span></div>
+          </article>
+
+          <article class="project">
             <h4>Health Diagnostics &amp; SOH-Aware Modeling</h4>
             <p>Extracting degradation features and building state-of-health-aware models for reliable health estimation in demanding applications such as eVTOL systems.</p>
             <div class="tags"><span class="tag">SOH</span><span class="tag">Degradation</span><span class="tag">eVTOL</span></div>
@@ -395,8 +404,14 @@
         <div class="projects">
           <article class="project">
             <h4>Recursive Parameter Identification of Nonlinear Stochastic State-Space Models</h4>
-            <p>A sequentialized Ensemble Kalman Inversion framework for online identification with latent states, combining particle-based state inference with Kalman-type parameter updates.</p>
+            <p>A sequentialized Ensemble Kalman Inversion (SEnKI) framework for online identification with latent states, combining a local particle filter with Kalman-type parameter updates. Validated on an NDC battery model and a nonlinear benchmark against augmented and dual EKF/UKF.</p>
             <div class="tags"><span class="tag">Sequential EnKI</span><span class="tag">Particle filtering</span><span class="tag">Online ID</span></div>
+          </article>
+
+          <article class="project">
+            <h4>Non-Gaussian Sequential Forecasting</h4>
+            <p>Integrating Gaussian anamorphosis (CDF transforms) with Ensemble Kalman Inversion, particle filtering, and deep latent state-space models to forecast sequences whose uncertainty is far from Gaussian.</p>
+            <div class="tags"><span class="tag">Gaussian anamorphosis</span><span class="tag">Deep SSMs</span><span class="tag">Forecasting</span></div>
           </article>
 
           <article class="project">
@@ -412,7 +427,7 @@
     <section class="section" id="publications">
       <h2>Publications</h2>
       <div>
-        <h3>Under review</h3>
+        <h3>Under review &amp; in preparation</h3>
         <ol class="pubs">
           <li class="pub">
             <span class="venue-chip">TCST</span>
@@ -420,6 +435,22 @@
               <p class="pub-title">System identification of nonlinear state-space models using Ensemble Kalman Inversion with application to lithium-ion batteries</p>
               <p class="pub-authors"><span class="me">F. Barat</span> and H. Fang</p>
               <p class="pub-venue"><em>IEEE Transactions on Control Systems Technology</em><span class="badge review">Under review</span></p>
+            </div>
+          </li>
+          <li class="pub">
+            <span class="venue-chip">ACC 2027</span>
+            <div>
+              <p class="pub-title">Robust State-of-Charge Estimation for Lithium-Ion Batteries by Neural Network-Enhanced Observer Design</p>
+              <p class="pub-authors"><span class="me">F. Barat</span>, R. Carter, and H. Fang</p>
+              <p class="pub-venue"><em>American Control Conference (ACC) 2027</em><span class="badge review">Submitted</span></p>
+            </div>
+          </li>
+          <li class="pub">
+            <span class="venue-chip">In prep.</span>
+            <div>
+              <p class="pub-title">Recursive Parameter Identification of Nonlinear Stochastic State-Space Models via Sequentialized Ensemble Kalman Inversion</p>
+              <p class="pub-authors"><span class="me">F. Barat</span>, S. Wilson, and H. Fang</p>
+              <p class="pub-venue">Manuscript in preparation</p>
             </div>
           </li>
         </ol>
@@ -474,7 +505,8 @@
           <div class="entry-body">
             <ul>
               <li>Developing Ensemble Kalman Inversion methods for battery model identification (ACC 2026; journal under review).</li>
-              <li>Experimental testing and characterization of second-life lithium-ion modules on a PEC battery tester.</li>
+              <li>Designing a neural-ODE-enhanced SOC observer trained on standard drive cycles (UDDS, LA92, US06, SC04).</li>
+              <li>Hands-on cell work: coin-cell assembly, fast-charge testing, and dQ/dV analysis of second-life lithium-ion modules on a PEC battery tester.</li>
             </ul>
           </div>
         </div>
@@ -575,6 +607,8 @@
               <span class="chip">System identification</span>
               <span class="chip">State-space modeling</span>
               <span class="chip">Optimal control</span>
+              <span class="chip">Neural ODEs</span>
+              <span class="chip">Deep state-space models</span>
             </div>
           </div>
           <div>
@@ -583,6 +617,9 @@
               <span class="chip">Equivalent circuit models</span>
               <span class="chip">Electro-thermal modeling</span>
               <span class="chip">SOH diagnostics</span>
+              <span class="chip">dQ/dV analysis</span>
+              <span class="chip">Coin-cell assembly</span>
+              <span class="chip">Fast-charge testing</span>
               <span class="chip">PEC battery tester</span>
             </div>
           </div>
