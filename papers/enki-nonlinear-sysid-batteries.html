@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Identification for Nonlinear Stochastic State-Space Models Using Ensemble Kalman Inversion with Application to Lithium-Ion Batteries | Farzaneh Barat</title>
+  <meta name="description" content="Nonlinear state-space system identification has attracted decades of interest, yet remains challenging because of the interplay among unknown parameters, n" />
+  <link rel="canonical" href="https://farzanehbarat.github.io/papers/enki-nonlinear-sysid-batteries.html" />
+  <meta name="citation_title" content="System Identification for Nonlinear Stochastic State-Space Models Using Ensemble Kalman Inversion with Application to Lithium-Ion Batteries" />
+  <meta name="citation_author" content="Farzaneh Barat" />
+  <meta name="citation_author" content="Rachel Carter" />
+  <meta name="citation_author" content="Sara Wilson" />
+  <meta name="citation_author" content="Huijeong Kim" />
+  <meta name="citation_author" content="Xinfan Lin" />
+  <meta name="citation_author" content="Huazhen Fang" />
+  <meta name="citation_publication_date" content="2026" />
+  <meta name="citation_technical_report_institution" content="arXiv" />
+  <meta name="citation_arxiv_id" content="2610.26741" />
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2610.26741" />
+  <meta property="og:title" content="System Identification for Nonlinear Stochastic State-Space Models Using Ensemble Kalman Inversion with Application to Lithium-Ion Batteries" />
+  <meta property="og:url" content="https://farzanehbarat.github.io/papers/enki-nonlinear-sysid-batteries.html" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <style>
+:root{--ink:#14213d;--text:#2b3445;--muted:#5b6575;--accent:#1f4e8c;--line:#e3e7ee;--soft:#f6f8fb;--serif:"Source Serif 4",Georgia,serif;--sans:"Inter",-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--sans);font-size:16.5px;line-height:1.65;color:var(--text);background:#fff}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}main{max-width:780px;margin:0 auto;padding:40px 24px 64px}
+.back{font-size:.92rem;font-weight:600}.venue{display:inline-block;margin:28px 0 12px;font-size:.8rem;font-weight:700;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+h1{font-family:var(--serif);font-size:1.9rem;line-height:1.25;color:var(--ink);text-wrap:balance}.authors{margin-top:12px}.authors strong{color:var(--ink)}.where{color:var(--muted);font-size:.95rem}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 8px}.btn{padding:8px 14px;border-radius:8px;font-size:.92rem;font-weight:600;border:1px solid var(--line);color:var(--ink)}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+h2{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:36px 0 10px}ul{padding-left:20px}li+li{margin-top:4px}
+pre{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:14px;font-size:.82rem;white-space:pre-wrap;overflow-wrap:anywhere}footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../#publications">&larr; Farzaneh Barat</a>
+    <p class="venue">IEEE TCST (under review)</p>
+    <h1>System Identification for Nonlinear Stochastic State-Space Models Using Ensemble Kalman Inversion with Application to Lithium-Ion Batteries</h1>
+    <p class="authors"><strong>Farzaneh Barat</strong>, Rachel Carter, Sara Wilson, Huijeong Kim, Xinfan Lin, Huazhen Fang</p>
+    <p class="where"><em>IEEE Transactions on Control Systems Technology (under review)</em>, 2026</p>
+    <div class="actions"><a class="btn primary" href="https://arxiv.org/pdf/2610.26741">PDF (arXiv)</a><a class="btn" href="https://arxiv.org/abs/2610.26741">arXiv page</a></div>
+    <h2>In short</h2>
+    <ul><li>Identifies parameters and hidden states of nonlinear stochastic models together.</li><li>Cascaded EnKI (CasEnKI) splits large datasets to speed up computation.</li><li>Demonstrated on a battery model with 10 states and 18 unknown parameters.</li></ul>
+    <h2>Abstract</h2>
+    <p>Nonlinear state-space system identification has attracted decades of interest, yet remains challenging because of the interplay among unknown parameters, nonlinear dynamics, and latent state variables. Its difficulty increases dramatically when the state and parameter dimensions increase. To address this challenge, we develop an ensemble Kalman inversion (EnKI)-based approach. This approach leverages EnKI to perform maximum a posteriori parameter estimation through successive local Gaussian approximations, enabling an iterative and incremental search for unknown parameters. The search combines Monte Carlo sampling with Kalman-type updates to evolve an ensemble of parameter samples, thereby offering empirical stability and the ability to handle strongly nonlinear models. The EnKI search is coupled with state estimation conditioned on the latest parameter estimates. This enables parameter identification along with latent state recovery. To improve scalability for large datasets, we further develop a cascaded EnKI (CasEnKI) method, which assimilates subdatasets sequentially to accelerate computation. We validate the proposed methods using a lithium-ion battery model with ten state variables and 18 unknown parameters. Simulation results show that the EnKI approach offers high identification accuracy and empirical stability in parameter search. Further, experimental results illustrate the computational efficiency and scalability of the CasEnKI method for large battery datasets.</p>
+    <h2>Cite this paper</h2>
+    <pre>@article{barat2026enki,
+  title   = {System Identification for Nonlinear Stochastic State-Space Models Using Ensemble Kalman Inversion with Application to Lithium-Ion Batteries},
+  author  = {Barat, Farzaneh and Carter, Rachel and Wilson, Sara and Kim, Huijeong and Lin, Xinfan and Fang, Huazhen},
+  journal = {arXiv preprint arXiv:2610.26741},
+  year    = {2026}
+}</pre>
+    <footer>Farzaneh Barat · Ph.D. student, Mechanical Engineering, University of Kansas · <a href="mailto:barat@ku.edu">barat@ku.edu</a> · <a href="../">Website</a></footer>
+  </main>
+</body>
+</html>
