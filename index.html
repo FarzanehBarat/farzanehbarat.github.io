@@ -191,6 +191,10 @@
     }
     .badge.accepted { background: #e9f6ef; color: #1d6b45; }
     .badge.review { background: #fdf3e3; color: #8a5a12; }
+    .bib summary { cursor: pointer; color: var(--accent); list-style: none; }
+    .bib summary::-webkit-details-marker { display: none; }
+    .bib[open] { flex-basis: 100%; }
+    .bib pre { margin-top: 8px; padding: 10px 12px; background: var(--soft); border: 1px solid var(--line); border-radius: 6px; font-size: 0.78rem; font-weight: 400; white-space: pre-wrap; overflow-wrap: anywhere; color: var(--text); }
     .pub-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; font-size: 0.9rem; font-weight: 600; }
 
     /* Timeline (experience / education) */
@@ -249,6 +253,11 @@
       .section { grid-template-columns: 1fr; gap: 20px; padding: 44px 0; }
       .section > h2 { position: static; }
       .projects, .skill-groups, .contact-grid { grid-template-columns: 1fr; }
+      .navbar { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .nav-links { width: 100%; overflow-x: auto; scrollbar-width: none; }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links a { white-space: nowrap; }
+      html { scroll-padding-top: 110px; }
     }
     @media (max-width: 720px) {
       .navbar { flex-direction: column; align-items: flex-start; gap: 8px; padding: 12px 16px; }
@@ -333,7 +342,7 @@
     <!-- ================= HERO ================= -->
     <section class="hero" id="top">
       <div>
-
+        <p class="status">Seeking a Summer 2027 internship: battery modeling, BMS algorithms, controls</p>
         <h1>Farzaneh Barat</h1>
         <p class="role">
           <strong>Ph.D. Student in Mechanical Engineering</strong> · University of Kansas
@@ -420,10 +429,15 @@
           <li class="pub">
             <span class="venue-chip">TCST</span>
             <div>
-              <p class="pub-title">System identification of nonlinear state-space models using Ensemble Kalman Inversion with application to lithium-ion batteries</p>
-              <p class="pub-authors"><span class="me">F. Barat</span> and H. Fang</p>
+              <p class="pub-title">System Identification for Nonlinear Stochastic State-Space Models Using Ensemble Kalman Inversion with Application to Lithium-Ion Batteries</p>
+              <p class="pub-authors"><span class="me">F. Barat</span>, R. Carter, S. Wilson, H. Kim, X. Lin, and H. Fang</p>
               <p class="pub-venue"><em>IEEE Transactions on Control Systems Technology</em><span class="badge review">Under review</span></p>
-              <div class="pub-links"><a href="https://arxiv.org/abs/2610.26741" target="_blank" rel="noopener">arXiv</a></div>
+              <div class="pub-links"><a href="https://arxiv.org/abs/2610.26741" target="_blank" rel="noopener">arXiv</a><details class="bib"><summary>BibTeX</summary><pre>@article{barat2026enki,
+  title   = {System Identification for Nonlinear Stochastic State-Space Models Using Ensemble Kalman Inversion with Application to Lithium-Ion Batteries},
+  author  = {Barat, Farzaneh and Carter, Rachel and Wilson, Sara and Kim, Huijeong and Lin, Xinfan and Fang, Huazhen},
+  journal = {arXiv preprint arXiv:2610.26741},
+  year    = {2026}
+}</pre></details></div>
             </div>
           </li>
           <li class="pub">
@@ -432,7 +446,16 @@
               <p class="pub-title">Solving nonlinear optimal path tracking problem using a new closed-loop direct-indirect optimization method: Application on mechanical manipulators</p>
               <p class="pub-authors">M. Irani Rahaghi and <span class="me">F. Barat</span></p>
               <p class="pub-venue"><em>Robotica</em>, vol. 37, no. 1, pp. 39–61, Jan. 2019</p>
-              <div class="pub-links"><a href="https://doi.org/10.1017/S0263574718000851" target="_blank" rel="noopener">DOI</a></div>
+              <div class="pub-links"><a href="https://doi.org/10.1017/S0263574718000851" target="_blank" rel="noopener">DOI</a><details class="bib"><summary>BibTeX</summary><pre>@article{iranirahaghi2019robotica,
+  title   = {Solving nonlinear optimal path tracking problem using a new closed loop direct--indirect optimization method: Application on mechanical manipulators},
+  author  = {Irani Rahaghi, M. and Barat, Farzaneh},
+  journal = {Robotica},
+  volume  = {37},
+  number  = {1},
+  pages   = {39--61},
+  year    = {2019},
+  doi     = {10.1017/S0263574718000851}
+}</pre></details></div>
             </div>
           </li>
         </ol>
@@ -453,7 +476,13 @@
               <p class="pub-title">Recursive Parameter Identification of Nonlinear Stochastic State-Space Models via Sequentialized Ensemble Kalman Inversion</p>
               <p class="pub-authors"><span class="me">F. Barat</span>, R. Carter, S. Wilson, and H. Fang</p>
               <p class="pub-venue"><em>Proceedings of the 2026 IEEE Conference on Decision and Control (CDC)</em>, 2026<span class="badge accepted">Accepted</span></p>
-              <div class="pub-links"><a href="https://arxiv.org/abs/2609.22704" target="_blank" rel="noopener">arXiv</a></div>
+              <div class="pub-links"><a href="https://arxiv.org/abs/2609.22704" target="_blank" rel="noopener">arXiv</a><details class="bib"><summary>BibTeX</summary><pre>@inproceedings{barat2026senki,
+  title     = {Recursive Parameter Identification of Nonlinear Stochastic State-Space Models via Sequentialized Ensemble Kalman Inversion},
+  author    = {Barat, Farzaneh and Carter, Rachel and Wilson, Sara and Fang, Huazhen},
+  booktitle = {Proceedings of the 65th IEEE Conference on Decision and Control (CDC)},
+  year      = {2026},
+  note      = {arXiv:2609.22704}
+}</pre></details></div>
             </div>
           </li>
           <li class="pub">
@@ -462,16 +491,29 @@
               <p class="pub-title">System Identification of Lithium-Ion Battery Equivalent Circuit Models Using Ensemble Kalman Inversion</p>
               <p class="pub-authors"><span class="me">F. Barat</span>, S. Wilson, H. Kim, and H. Fang</p>
               <p class="pub-venue"><em>Proceedings of the 2026 American Control Conference (ACC)</em>, 2026</p>
-              <div class="pub-links"><a href="https://ieeexplore.ieee.org/abstract/document/11616140" target="_blank" rel="noopener">IEEE Xplore</a><a href="https://arxiv.org/abs/2604.10813" target="_blank" rel="noopener">arXiv</a></div>
+              <div class="pub-links"><a href="https://ieeexplore.ieee.org/abstract/document/11616140" target="_blank" rel="noopener">IEEE Xplore</a><a href="https://arxiv.org/abs/2604.10813" target="_blank" rel="noopener">arXiv</a><details class="bib"><summary>BibTeX</summary><pre>@inproceedings{barat2026acc,
+  title     = {System Identification of Lithium-Ion Battery Equivalent Circuit Models Using Ensemble Kalman Inversion},
+  author    = {Barat, Farzaneh and Wilson, Sara and Kim, Huijeong and Fang, Huazhen},
+  booktitle = {Proceedings of the 2026 American Control Conference (ACC)},
+  pages     = {1615--1622},
+  year      = {2026}
+}</pre></details></div>
             </div>
           </li>
           <li class="pub">
-            <span class="venue-chip">ICEE 2019</span>
+            <span class="venue-chip">KBEI 2019</span>
             <div>
-              <p class="pub-title">Solving nonlinear optimization problem using a new closed loop method for optimal tracking of a path</p>
-              <p class="pub-authors"><span class="me">F. Barat</span> and M. Irani Rahaghi</p>
-              <p class="pub-venue"><em>27th Iranian Conference on Electrical Engineering</em>, Yazd, Iran, pp. 1415–1420, May 2019</p>
-              <div class="pub-links"><a href="https://doi.org/10.1109/KBEI.2019.8734913" target="_blank" rel="noopener">DOI</a></div>
+              <p class="pub-title">Solving nonlinear optimization problem using new closed loop method for optimal path tracking</p>
+              <p class="pub-authors"><span class="me">F. Barat</span>, M. Irani, and M. Pahlevanzade</p>
+              <p class="pub-venue"><em>2019 5th Conference on Knowledge Based Engineering and Innovation (KBEI)</em>, Tehran, Iran, pp. 472–477, 2019</p>
+              <div class="pub-links"><a href="https://doi.org/10.1109/KBEI.2019.8734913" target="_blank" rel="noopener">DOI</a><details class="bib"><summary>BibTeX</summary><pre>@inproceedings{barat2019kbei,
+  title     = {Solving nonlinear optimization problem using new closed loop method for optimal path tracking},
+  author    = {Barat, Farzaneh and Irani, Mohsen and Pahlevanzade, Mahsa},
+  booktitle = {2019 5th Conference on Knowledge Based Engineering and Innovation (KBEI)},
+  pages     = {472--477},
+  year      = {2019},
+  doi       = {10.1109/KBEI.2019.8734913}
+}</pre></details></div>
             </div>
           </li>
         </ol>
@@ -528,8 +570,8 @@
             <p class="entry-title">Ph.D., Mechanical Engineering</p>
             <p class="entry-org">University of Kansas · Lawrence, KS</p>
           </div>
-          <p class="entry-date">Aug 2023 – Present</p>
-          <div class="entry-body">Advisor: Huazhen Fang. Battery modeling, parameter identification, electro-thermal analysis, health diagnostics, and second-life battery systems.</div>
+          <p class="entry-date">Aug 2023 – Expected May 2028</p>
+          <div class="entry-body">Advisors: Huazhen Fang and Rachel Carter. Battery modeling, parameter identification, electro-thermal analysis, health diagnostics, and second-life battery systems.</div>
         </div>
 
         <div class="entry">
